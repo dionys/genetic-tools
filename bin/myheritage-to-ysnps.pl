@@ -3,8 +3,6 @@
 use strict;
 use warnings;
 
-use feature 'say';
-use DDP;
 
 die("Usage:\n    $0 <data-file> <index-file>\n") if @ARGV < 2;
 
@@ -25,7 +23,6 @@ while(<$fh>) {
 }
 close($fh);
 
-my $i;
 open($fh, '<', $ARGV[1]) or die("Can't open index file \"$ARGV[1]\"");
 while(<$fh>) {
     s/[\r\n]//g;
